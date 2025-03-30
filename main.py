@@ -2,8 +2,7 @@
 
 import pandas as pd
 from database import create_connection
-from process_txt import read_txt_in_batches
-from process_txt import fill_missing_values
+from process_txt import read_txt_in_batches, fill_missing_values
 from process_csv import read_csv_maximos, read_csv_minimos, read_csv_tarifas
 from utils import get_statistics
 
@@ -64,11 +63,12 @@ def process_and_insert_batches(folder_path, tarifas, minimos, maximos, connectio
         print(f"Filas cargadas hasta ahora: {total_rows}")
         print(f"Sumatoria de tasa calculada hasta ahora: {total_tasa_calculada:.2f}")
 
+# Cambia la ruta para aplicarlo en tu entorno
 if __name__ == "__main__":
-    folder_path = r"C:/Users/angel/OneDrive/Prueba_Tecnica/02_dataset"
-    maximos_path = r"C:/Users/angel/OneDrive/Prueba_Tecnica/maximos.csv"
-    minimos_path = r"C:/Users/angel/OneDrive/Prueba_Tecnica/minimos.csv"
-    tarifas_path = r"C:/Users/angel/OneDrive/Prueba_Tecnica/tarifa_por_destino.csv"
+    folder_path = r"C:/Users/angel/OneDrive/Documentos/_01_Portafolio/_01_Jikkosoft/02_dataset"
+    maximos_path = r"C:/Users/angel/OneDrive/Documentos/_01_Portafolio/_01_Jikkosoft/maximos.csv"
+    minimos_path = r"C:/Users/angel/OneDrive/Documentos/_01_Portafolio/_01_Jikkosoft/minimos.csv"
+    tarifas_path = r"C:/Users/angel/OneDrive/Documentos/_01_Portafolio/_01_Jikkosoft/tarifa_por_destino.csv"
 
     connection = create_connection()
 

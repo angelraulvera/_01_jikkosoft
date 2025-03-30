@@ -9,3 +9,4 @@ def create_connection():
         password="MariaPaula18*", 
         database="jikkosoft" 
     )
+# Cambia con tus credenciales en MySQL para aplicarlo en tu entorno.
